@@ -12,8 +12,7 @@ int _printf(const char *format, ...)
 {
 	const char *p;
 	int count = 0;
-	int i;
-	int a = 0;
+	int i, a = 0;
 	char *s;
 	va_list argp;
 
@@ -32,17 +31,20 @@ int _printf(const char *format, ...)
 		case 'c':
 			i = va_arg(argp, int);
 			_putchar(i);
+			count++;
 			break;
 		case 's':
 			s = va_arg(argp, char *);
 			while (s[a] != '\0')
 			{
 				_putchar(s[a]);
+				count++;
 				a++;
 			}
 			break;
 		case '%':
 			_putchar('%');
+			count++;
 			break;
 		}
 	}
