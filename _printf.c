@@ -46,6 +46,10 @@ int _printf(const char *format, ...)
 			_putchar('%');
 			count++;
 			break;
+		default:
+			_putchar(*--p);
+			count++;
+			continue;
 		}
 	}
 	return (count);
