@@ -4,5 +4,4 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 int print_char(va_list argp);
-int print_str(va_list argp);
 #endif
