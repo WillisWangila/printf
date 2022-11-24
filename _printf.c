@@ -40,8 +40,7 @@ int _printf(const char *format, ...)
 			}
 			break;
 		case '%':
-			_putchar('%');
-			count++;
+			print_char(argp);
 			break;
 		default:
 			_putchar(*--p);

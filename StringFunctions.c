@@ -5,7 +5,6 @@
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
- * print_char
  * Return: number of printed characters
  */
 int _putchar(char c)
@@ -13,6 +12,11 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 
+/**
+ * print_char - prints character when %c is specified
+ * @argp: character to be printed
+ * Return: number of printed characters
+*/
 int print_char(va_list argp)
 {
 	char c = va_arg(argp, int);
