@@ -11,8 +11,7 @@
 int _printf(const char *format, ...)
 {
 	const char *p;
-	int i, a = 0, count = 0;
-	char *s;
+	int count = 0;
 	va_list argp;
 
 	va_start(argp, format);
@@ -28,18 +27,10 @@ int _printf(const char *format, ...)
 		switch (*++p)
 		{
 		case 'c':
-			i = va_arg(argp, int);
-			_putchar(i);
-			count++;
+			print_char(argp);
 			break;
 		case 's':
-			s = va_arg(argp, char *);
-			while (s[a] != '\0')
-			{
-				_putchar(s[a]);
-				count++;
-				a++;
-			}
+			print_str(argp);
 			break;
 		case '%':
 			_putchar('%');
