@@ -46,6 +46,7 @@ int _printf(const char *format, ...)
 			break;
 		default:
 			_putchar(*--p);
+			count++;
 			continue;
 		}
 	}
