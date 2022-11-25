@@ -13,14 +13,13 @@ int _putchar(char c)
 }
 
 /**
- * print_char - prints character when %c is specified
- * @argp: character to be printed
- * Return: number of printed characters
+ * print_char - prints a single character
+ * @argp: contains character to be printed
+ * Return: nothing
 */
-int print_char(va_list argp)
+void print_char(va_list argp)
 {
 	char c = va_arg(argp, int);
 
 	_putchar(c);
-	return (1);
 }

@@ -29,6 +29,7 @@ int _printf(const char *format, ...)
 		{
 		case 'c':
 			print_char(argp);
+			count++;
 			break;
 		case 's':
 			s = va_arg(argp, char *);
@@ -40,11 +41,11 @@ int _printf(const char *format, ...)
 			}
 			break;
 		case '%':
-			print_char(argp);
+			_putchar('%');
+			count++;
 			break;
 		default:
 			_putchar(*--p);
-			count++;
 			continue;
 		}
 	}
